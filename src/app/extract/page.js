@@ -18,7 +18,7 @@ export default function Extract() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 pt-32 max-w-4xl mx-auto"> {/* Added max-width and margin auto */}
       <h2 className="text-xl font-bold mb-4">Extract Message</h2>
       <FileUpload onFileUpload={setImage} label="Upload Embedded Image" />
       <button
@@ -28,10 +28,14 @@ export default function Extract() {
         Extract Message
       </button>
       {message && (
-        <div className="mt-4 p-4 bg-gray-100 rounded-md">
+        <>
+        <div className="mt-4 py-4"> {/* Added text control */}
           <p className="font-semibold">Extracted Message:</p>
-          <p className="mt-2">{message}</p>
-        </div>
+          <div className='mt-4 bg-gray-100 rounded-md break-words overflow-auto max-h-96'>
+          <pre className="mt-2 whitespace-pre-wrap font-sans">{message}</pre> {/* Changed to pre with wrapping */}
+          </div>
+          </div>
+        </>
       )}
     </div>
   );

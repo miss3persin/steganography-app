@@ -18,7 +18,7 @@ export default function Visualize() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 pt-32 max-w-4xl mx-auto">
       <h2 className="text-xl font-bold mb-4">Visualize LSB</h2>
       <FileUpload onFileUpload={setImage} label="Upload Image" />
       <button

@@ -19,14 +19,15 @@ export default function Embed() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 pt-32 max-w-4xl mx-auto">
       <h2 className="text-xl font-bold mb-4">Embed Message</h2>
       <FileUpload onFileUpload={setImage} label="Upload Image" />
       <textarea
         placeholder="Enter your secret message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        className="w-full p-2 border border-gray-300 rounded-md mb-4"
+        rows={4}
+        className="w-full p-2 border border-gray-300 rounded-md mb-4 resize-none"
       />
       <button
         onClick={handleEmbed}

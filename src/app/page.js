@@ -5,7 +5,7 @@ import Link from 'next/link';
 const page = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold mb-8 text-gray-800">Steganography App</h1>
+      <h1 className="text-4xl font-bold mb-8 text-gray-800 text-center mt-12 md:mt-0">Steganography App</h1>
       <div className="space-y-4">
         <Link
           href="/embed"
@@ -26,6 +26,7 @@ const page = () => {
           Visualize LSB
         </Link>
       </div>
+      <p className='mt-8 text-red-600 text-center'>Note: PNGs works best on the application</p>
     </div>
   )
 }
